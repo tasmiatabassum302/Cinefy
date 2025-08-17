@@ -1,6 +1,8 @@
 import React from 'react';
 import MovieCard from '../Components/MovieCard'
 import { dummyShowsData } from '../assets/assets';
+import BlurCircle from '../Components/BlurCircle';
+
 
 const Movies = () => {
   return dummyShowsData.length > 0 ? (
