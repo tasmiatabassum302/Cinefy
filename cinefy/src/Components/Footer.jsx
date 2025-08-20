@@ -20,9 +20,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ✅ Quick Links */}
+        {/* Quick Links */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-white text-lg font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-white">Home</a></li>
             <li><a href="/about" className="hover:text-white">About</a></li>
@@ -30,6 +30,13 @@ const Footer = () => {
             <li><a href="/privacy" className="hover:text-white">Privacy Policy</a></li>
           </ul>
         </div>
+        <div>
+  <h3 className="text-white text-lg font-semibold mb-4">Get in Touch</h3>
+  <ul className="space-y-2 text-sm">
+    <li>Phone: <a href="tel:+880123456789" className="hover:text-white">+880 1631 500 617</a></li>
+    <li>Email: <a href="mailto:info@cinefy.com" className="hover:text-white">info@cinefy.com</a></li>
+  </ul>
+</div>
       </div>
 
       {/* Bottom footer */}
