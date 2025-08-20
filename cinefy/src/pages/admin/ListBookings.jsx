@@ -1,10 +1,11 @@
 import React from 'react';
+import Title from '../../Components/admin/Title';
 
 const ListBookings = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Title text1="List" text2="Bookings" />
+    </>
   );
 };
 
