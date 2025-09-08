@@ -1,3 +1,5 @@
+import axios from "axios"
+
 export const getNowPlayingMovies= async(requestAnimationFrame,res) => {
     try{
 
