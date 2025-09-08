@@ -1,8 +1,8 @@
 import mongoes from "mongoose";
 const shoeSchema =new mongoes.Schema(
     {
-        movie:{type:String,required:true, ref:'Movie'}
-        showDateTime{type:Data,required:true },
+        movie:{type:String,required:true, ref:'Movie'},
+        showDateTime:{type:Date,required:true },
         showPrice:{type:Number,required:true},
         occupiedSeats: { type: Object, default:{} }
     }, {minimum: false}
