@@ -9,10 +9,8 @@ import showRouter from './Routes/showRoutes.js';
 
 
 const port = 3000;
-const startServer=async()=>{
-    try{
-// Connect to database
-await connectDB();
+
+
 const app = express();
 // Middleware
 app.use(express.json());
@@ -23,14 +21,13 @@ app.use(clerkMiddleware());
 app.get('/', (req, res) => res.send('Server is Live!'));
 app.use('/api/inngest', serve({ client: inngest, functions }));
 app.use('/api/shows', showRouter);
-
-// Start server
-app.listen(port, () => { console.log(`Server listening at http://localhost:${port}`);
-    });
+// Connect to database
+await connectDB();
+if (process.env.NODE_ENV !== 'production')
+{
+  const port = process.env.PORT||3000;
+  app.listen(port, () => {
+    console.log(`🚀 Server is running on http://localhost:${port}`);
+  });
 }
-catch(error){
-    console.log(`Failed to start Server : `,error);
-    process.exit(1);
-}
-};
-startServer();
+export default app;
