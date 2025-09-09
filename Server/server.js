@@ -23,5 +23,10 @@ app.use('/api/inngest', serve({ client: inngest, functions }));
 app.use('/api/shows', showRouter);
 // Connect to database
 await connectDB();
-
+if (process.env.NODE_ENV !== 'production') {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`🚀 Server is running on http://localhost:${port}`);
+  });
+}
 export default app;
