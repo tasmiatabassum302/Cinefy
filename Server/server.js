@@ -7,7 +7,7 @@ import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js"
 import showRouter from './Routes/showRoutes.js';
 import bookingRouter from './Routes/bookingRoutes.js';
-import userRouter from './Routes/userRoutes.js';
+
 const app=express();
 const port=3000;
 await connectDB()
